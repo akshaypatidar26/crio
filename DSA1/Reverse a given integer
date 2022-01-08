@@ -1,1 +1,27 @@
 
+#include <bits/stdc++.h>
+using namespace std;
+
+// TODO: Implement this method
+int reverseNum(int n){
+   long int rev = 0;
+    while (n!=0)
+    {
+         long int rem = n%10;
+         rev =rev*10 + rem ;
+         n = n/10;
+    }
+    if(rev<INT_MIN || rev >INT_MAX)
+    {
+         return 0;
+    }
+    return rev;
+}
+
+// NOTE: Please do not modify this function
+int main(){
+	int n;
+	cin>>n;
+	int ans = reverseNum(n);
+	cout<<ans<<endl;
+}
